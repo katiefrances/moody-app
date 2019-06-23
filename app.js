@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
 
-mongoose.connect("mongodb://localhost/contact_app", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/moody", { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
 mongoose.connection.on("error", error => console.log(error));

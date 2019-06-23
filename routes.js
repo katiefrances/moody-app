@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const ContactController = require("./controllers/contact_controller");
+const MoodyController = require("./controllers/moody_controller");
 
-router.get("/", ContactController.newResource);
+router.get("/", MoodyController.renderUser);
 
-router.post("/contacts", ContactController.create);
+router.post("/users", MoodyController.createUser);
 
-router.get("/contacts", ContactController.index);
+router.get("/users", MoodyController.userIndex);
 
 module.exports = router;

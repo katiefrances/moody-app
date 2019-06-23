@@ -27,6 +27,7 @@ function create(req, res) {
     });
 }
 
+// export functions
 module.exports = {
   index,
   newResource,

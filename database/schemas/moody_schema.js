@@ -73,3 +73,5 @@ const MoodySchema = new Schema({
 
   // end schema
 });
+
+module.exports = MoodySchema;
