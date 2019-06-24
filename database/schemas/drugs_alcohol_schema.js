@@ -14,4 +14,4 @@ const DrugsAlcohol = new Schema({
   }
 });
 
-export default DrugsAlcohol;
+module.exports = DrugsAlcohol;

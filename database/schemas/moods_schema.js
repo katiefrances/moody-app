@@ -17,4 +17,4 @@ const MoodsSchema = {
   }
 };
 
-export default MoodsSchema;
+module.exports = MoodsSchema;

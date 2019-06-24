@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 const app = express();
-const port = 4000;
+const port = 3000;
 
 mongoose.connect("mongodb://localhost/moody", { useNewUrlParser: true });
 mongoose.Promise = global.Promise;

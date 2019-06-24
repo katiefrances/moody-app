@@ -25,4 +25,4 @@ const MedsSchema = {
   }
 };
 
-export default MedsSchema;
+module.exports = MedsSchema;

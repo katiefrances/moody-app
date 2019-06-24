@@ -1,5 +1,5 @@
 // Links to model
-const MoodyModel = require("./../database/models/moody_model");
+const MoodyModel = require("./../database/models/daily_model");
 
 // Index of users that are returned on load
 function userIndex(req, res) {
