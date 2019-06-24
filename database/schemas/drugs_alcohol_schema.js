@@ -11,6 +11,16 @@ const DrugsAlcohol = new Schema({
     type: Number,
     min: 0,
     max: 4
+  },
+
+  alcohol: {
+    type: Number,
+    required: true
+  },
+
+  alcoholAmount: {
+    type: Number,
+    min: 0
   }
 });
 
