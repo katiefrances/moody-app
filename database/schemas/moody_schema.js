@@ -10,12 +10,6 @@ const MoodSchema = new Schema({
     required: true
   },
 
-  alcohol: {
-    // type of alcohol & how much
-    type: Boolean,
-    required: true
-  },
-
   exercise: {
     // amount?
     type: Boolean,
@@ -24,12 +18,6 @@ const MoodSchema = new Schema({
 
   irritation: {
     // also amount somehow
-    type: Boolean,
-    required: true
-  },
-
-  drugs: {
-    // which
     type: Boolean,
     required: true
   },

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const MedsSchema = {
+  // should have already have dosage and meds information
   meds: {
     // checkboxes
     type: Boolean,
@@ -23,3 +24,5 @@ const MedsSchema = {
     required: true
   }
 };
+
+export default MedsSchema;
