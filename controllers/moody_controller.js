@@ -14,7 +14,7 @@ function userIndex(req, res) {
 
 // If 200 - render
 function newUser(req, res) {
-  return res.render("user");
+  return res.render("users");
 }
 
 // Create functions

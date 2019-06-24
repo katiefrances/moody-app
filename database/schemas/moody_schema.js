@@ -1,31 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const MoodySchema = new Schema({
-  sleep: {
-    type: Number,
-    required: true
-    // well rested?
-  },
+// seperate into different schemas
 
-  fatigue: {
-    type: Number,
-    required: true
-  },
-
-  mood: {
-    //  Not sure of how to get multiple
-    type: String,
-    default: "",
-    required: true
-  },
-
-  meds: {
-    // yes/no and if which
-    type: String,
-    default: ""
-  },
-
+const MoodSchema = new Schema({
   ate: {
     // what and how many meals
     type: Boolean,

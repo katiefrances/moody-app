@@ -1,4 +1,9 @@
 <form method="post" action="/users">
+  <h1>Add mood for {{{moment().format("MMM Do YY")}}</h1>
+  <div>
+    <label>Sleep</label>
+    <input type="text" name="sleep" />
+  </div>
   <div>
     <label>Email</label>
     <input type="email" name="email" />
@@ -15,3 +20,18 @@
     <input type="submit" value="Add Day" />
   </div>
 </form>
+
+< {{!-- 
+    form fields:
+    sleep,
+    fatigue,
+    mood,
+    meds,
+    food,
+    alcohol,
+    exercise,
+    irritation,
+    drugs,
+    caffeine,
+    events,
+    triggers --}}
