@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 const DrugsAlcoholSchema = require("./drugs_alcohol_schema");
 const MedsSchema = require("./meds_schema");
 const MoodsSchema = require("./moods_schema");
+const UsersSchema = require("./users_schema");
 
 const DailySchema = {
   date: { type: Date, default: Date.now },
