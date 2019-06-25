@@ -1,9 +1,9 @@
 // Links to model
-const MoodyModel = require("./../database/models/daily_model");
+const DailyModel = require("./../database/models/daily_model");
 
 // Index of users that are returned on load
 function userIndex(req, res) {
-  MoodyModel.find()
+  DailyModel.find()
     .then(users => {
       return res.json(users);
     })
@@ -21,37 +21,42 @@ function newUser(req, res) {
 function create(req, res) {
   let {
     sleep,
-    fatigue,
-    mood,
-    meds,
-    food,
-    alcohol,
-    exercise,
-    irritation,
-    drugs,
-    caffeine,
-    events,
-    triggers
+    tired,
+    moodManic,
+    moodDepressed,
+    moodAnxious
+    // mood,
+    // meds,
+    // food,
+    // alcohol,
+    // exercise,
+    // irritation,
+    // drugs,
+    // caffeine,
+    // events,
+    // triggers
   } = req.body;
 
   let user = {
     sleep,
-    fatigue,
-    mood,
-    meds,
-    food,
-    alcohol,
-    exercise,
-    irritation,
-    drugs,
-    caffeine,
-    events,
-    triggers
+    tired,
+    mood: { moodManic, moodDepressed, moodAnxious }
+    // mood,
+    // meds,
+    // food,
+    // alcohol,
+    // exercise,
+    // irritation,
+    // drugs,
+    // caffeine,
+    // events,
+    // triggers
   };
 
   // create user
-  MoodyModel.create(user)
+  DailyModel.create(user)
     .then(user => {
+      console.log(user);
       return res.render("success");
     })
     .catch(err => {

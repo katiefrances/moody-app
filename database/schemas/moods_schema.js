@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const MoodsSchema = {
+const MoodsSchema = new Schema({
   moodManic: {
     manic: { type: Number, min: 0, max: 4 }
   },
@@ -15,6 +15,6 @@ const MoodsSchema = {
   moodAnxious: {
     anxiety: { type: Number, min: 0, max: 4 }
   }
-};
+});
 
 module.exports = MoodsSchema;

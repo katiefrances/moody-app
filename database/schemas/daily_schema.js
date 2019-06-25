@@ -5,13 +5,13 @@ const MedsSchema = require("./meds_schema");
 const MoodsSchema = require("./moods_schema");
 const UsersSchema = require("./users_schema");
 
-const DailySchema = {
+const DailySchema = new Schema({
   date: { type: Date, default: Date.now },
   sleep: { type: Number, min: 0, max: 24 },
-  fatigue: { type: Boolean, required: true },
-  moods: [MoodsSchema],
-  meds: [MedsSchema],
-  drugsAlcohol: [DrugsAlcoholSchema]
-};
+  tired: { type: Boolean, required: true }
+  // moods: [MoodsSchema]
+  // meds: [MedsSchema],
+  // drugsAlcohol: [DrugsAlcoholSchema]
+});
 
 module.exports = DailySchema;
