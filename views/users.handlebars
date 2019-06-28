@@ -1,129 +1,127 @@
 <form method="post" action="/users">
   <h1>Add Today's Mood</h1>
   {{!-- use moment.js to make date dynamic --}}
+
   <div>
     <div>
-      {{!-- sleep & fatigue --}}
       <label>Date:</label>
-      <input type="date" name="dailyDate">
+      <input type="date" value="true" name="date">
     </div>
     <br>
-    <h3>Sleep:</h3>
-    <label>Sleep Amount:</label>
+
+    <div>
+      <h3>Sleep:</h3>
+      <label>Sleep Amount:</label>
+    </div>
     <input type="range" name="sleep" min="0" max="24">
-  </div>
 
-  <div>
-    <label>Tired:</label>
-    <input type="radio" name="tired" value="yes">Yes
-    <input type="radio" name="tired" value="no">No
-  </div>
-  {{!-- moods --}}
-  <br>
-  <div>
-    <label>
-      <h3>Moods:</h3>
-    </label>
-    <label>Manic/Hypomanic:</label>
-    <input type="range" name="manic" min="0" max="4" />
+    <div>
+      <label>Tired:</label>
+      <input type="checkbox" value="true" name="tired">
+    </div>
+
     <br>
-    <label>Depressed:</label>
-    <input type="range" name="depressed" min="0" max="4" />
-  </div>
-  <div>
-    <label>Irritation:</label>
-    <input type="range" name="irritation" min="0" max="4" />
-  </div>
+    <div>
+      <label>
+        <h3>Moods:</h3>
+      </label>
+      <label>Manic/Hypomanic:</label>
+      <input type="range" name="manic" min="0" max="4" step="1" />
+      <br>
+      <label>Depressed:</label>
 
-  <br>
-  <div>
-    {{!-- sHould have data already that user has inputted --}}
-    <label>
-      <h3>Meds:</h3>
-    </label>
-    {{!-- Meds should show up that are inputted automatically --}}
-    <input type="checkbox" name="meds1"> Meds 1
-    <input type="checkbox" name="meds2"> Meds 2
+      <input type="range" name="depressed" min="0" max="4" />
+    </div>
+    <div>
+      <label>Anxiety:</label>
+      <input type="range" name="anxiety" min="0" max="4" />
+    </div>
+    <div>
+      <label>Irritation:</label>
+      <input type="range" name="irritation" min="0" max="4" />
+    </div>
+
+    <br>
+    <div>
+      {{!-- sHould have data already that user has inputted --}}
+      <label>
+        <h3>Meds:</h3>
+      </label>
+      {{!-- Meds should show up that are inputted automatically --}}
+      <input type="checkbox" value="true" name="meds"> Meds 1
+      {{!-- <input type="checkbox" name="meds2"> Meds 2
     <input type="checkbox" name="meds3"> Meds 3
-    <input type="checkbox" name="meds4"> Meds 4
-  </div>
-  {{!-- / --}}
-  <br>
-  <div>
-    <label>
-      <h3>Drugs/Alcohol:</h3>
-    </label>
-    {{!-- should be able to input what drugs instead of having a list?
+    <input type="checkbox" name="meds4"> Meds 4 --}}
+    </div>
+    {{!-- / --}}
+    <br>
+    <div>
+      <label>
+        <h3>Drugs/Alcohol:</h3>
+      </label>
+      {{!-- should be able to input what drugs instead of having a list?
     plus I don't even know that many drugs?
      --}}
-    One <input type="checkbox" name="drugs">
-    Two <input type="checkbox" name="alcohol">
-  </div>
-  <br>
+      Drugs <input type="checkbox" value="true" name="drugs">
+      {{!-- <input type="checkbox" name="drugsAmount"> Amount --}}
+      Alcohol <input type="checkbox" value="true" name="alcohol">
+      {{!-- Amount <input type="checkbox" name="alcoholAmount"> --}}
+    </div>
+    <br>
 
-  <div>
-    <label>
-      <h3>Meals:</h3>
-      <input type="range" name="manic" min="0">
-    </label>
-  </div>
+    <div>
+      <label>
+        <h3>Meals:</h3>
+        <input type="range" name="ate" min="0">
+      </label>
+    </div>
 
-  <div>
-    <label>
-      <h3>Exercise:</h3>
-    </label>
-    Yes <input type="checkbox" name="exercise">
-    No <input type="checkbox" name="exercise">
-  </div><br>
+    <div>
+      <label>
+        <h3>Exercise:</h3>
+      </label>
+      <input type="checkbox" name="exercise" value="true">
+    </div><br>
 
-  <div>
-    <label>
-      <h3>Period:</h3>
-      Yes <input type="checkbox" name="exercise">
-      No <input type="checkbox" name="exercise">
-    </label>
-  </div><br>
+    <div>
+      <label>
+        <h3>Caffeine:</h3>
+        <input type="range" name="caffeine" min="0" name="caffeine">
+      </label>
+    </div><br>
 
-  <div>
-    <label>
-      <h3>Events:</h3>
-    </label>
-    <input type="text" name="events">
-  </div><br>
+    <div>
+      <label>
+        <h3>Events:</h3>
+      </label>
+      <input type="text" name="events">
+    </div><br>
 
-  <div>
-    <label>
-      <h3>DBT Skills:</h3>
-    </label>
-    <input type="text" name="dbt">
-  </div>
-  <br>
+    <div>
+      <label>
+        <h3>Period:</h3>
+        <input type="checkbox" value="true" name="period">
+      </label>
+    </div><br>
 
-  <div>
-    <label>
-      <h3>Triggers:</h3>
-    </label>
-    <input type="text" name="triggers">
-  </div>
-  <br>
+    <div>
+      <label>
+        <h3>DBT Skills:</h3>
+      </label>
+      <input type="text" name="dbtskills">
+    </div>
+    <br>
 
-  <div>
-    <input type="submit" value="Add Day" />
-  </div>
-  {{!-- end form --}}
+    <div>
+      <label>
+        <h3>Triggers:</h3>
+      </label>
+      <input type="text" name="triggers">
+    </div>
+    <br>
+
+    <div>
+      <input type="submit" value="Add Day" />
+    </div>
+    {{!-- end form --}}
 </form>
-
-{{!-- 
-    form fields:
-    sleep,
-    fatigue,
-    mood,
-    meds,
-    food,
-    alcohol,
-    exercise,
-    irritation,
-    drugs,
-    caffeine,
-    events,
-    triggers --}}

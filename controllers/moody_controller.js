@@ -13,50 +13,67 @@ function userIndex(req, res) {
 }
 
 // If 200 - render
-function newUser(req, res) {
+async function newUser(req, res) {
   return res.render("users");
 }
 
 // Create functions
-function create(req, res) {
+async function create(req, res) {
+  console.log(req.body);
+
   let {
+    date,
     sleep,
     tired,
-    moodManic,
-    moodDepressed,
-    moodAnxious
-    // mood,
-    // meds,
-    // food,
-    // alcohol,
-    // exercise,
-    // irritation,
-    // drugs,
-    // caffeine,
-    // events,
-    // triggers
+    manic,
+    depressed,
+    anxiety,
+    irritation,
+    meds,
+    // medsMorning,
+    // medsLunchtime,
+    // medsEvening,
+    drugs,
+    // drugsAmount,
+    alcohol,
+    // alcoholAmount,
+    ate,
+    exercise,
+    caffeine,
+    events,
+    period,
+    dbtskills,
+    triggers
   } = req.body;
 
   let user = {
+    date,
     sleep,
     tired,
-    mood: { moodManic, moodDepressed, moodAnxious }
-    // mood,
-    // meds,
-    // food,
-    // alcohol,
-    // exercise,
-    // irritation,
-    // drugs,
-    // caffeine,
-    // events,
-    // triggers
+    manic,
+    depressed,
+    anxiety,
+    irritation,
+    meds,
+    // medsMorning,
+    // medsLunchtime,
+    // medsEvening,
+    drugs,
+    // drugsAmount,
+    alcohol,
+    // alcoholAmount,
+    ate,
+    exercise,
+    caffeine,
+    events,
+    period,
+    dbtskills,
+    triggers
   };
 
   // create user
   DailyModel.create(user)
     .then(user => {
-      console.log(user);
       return res.render("success");
     })
     .catch(err => {
