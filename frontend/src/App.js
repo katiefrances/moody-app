@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Homepage from "./Homepage";
-import Login from "./Login";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom
+
 export default class App extends Component {
   render() {
     return (
-      <>
-        <Homepage />
+      <>  
+
       </>
-    );
+    )
   }
-}
+ }
