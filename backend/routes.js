@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const MoodyController = require("./controllers/moody_controller");
+// can add validation here
 
 router.get("/", MoodyController.newUser);
 

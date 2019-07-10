@@ -8,7 +8,7 @@ function userIndex(req, res) {
       return res.json(users);
     })
     .catch(err => {
-      return res.status.send(`Error: ${err}`);
+      return res.status.send(`Oh no! An error!: ${err}`);
     });
 }
 
@@ -77,7 +77,9 @@ async function create(req, res) {
       return res.render("success");
     })
     .catch(err => {
-      return res.status(500).send(`Error: ${err}`);
+      return res
+        .status(500)
+        .send(`Here are some errors for you Katie!: ${err}`);
     });
 }
 
