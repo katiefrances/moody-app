@@ -8,9 +8,7 @@ export default class Homepage extends Component {
       <Container>
         {/* Stats on right, cal */}
         <Row>
-          <Col sm="6">
-            <p> Calendar</p>
-          </Col>
+          <Col sm="6" />
           <Col sm="6">
             <canvas id="myChart" width="400" height="400" />
 
