@@ -1,5 +1,5 @@
-import React from "react";
-import Main from "./Main.css";
+import React, { Component } from "react";
+import axios from "axios";
 
 import {
   Button,
@@ -12,7 +12,32 @@ import {
   Col
 } from "reactstrap";
 
-export default class Login extends React.Component {
+export default class Login extends Component {
+  state = {
+    email: "",
+    password: ""
+  };
+
+  onFormSubmit = event => {
+    event.preventDefault();
+    const { email, password } = this.state;
+    axios
+      .post("http://localhost:3000/auth/login", {
+        email,
+        password
+      })
+      .them(console.log("succesfully logged in"));
+  };
+
+  // do I keep it as name or change it to email?
+  // *thinking emoji
+  onInputChange = (email, event) => {
+    console.log(this.state);
+    this.setState({
+      [email]: event.target.value
+    });
+  };
+
   render() {
     return (
       <>
@@ -22,30 +47,29 @@ export default class Login extends React.Component {
             <Col md="6">
               <Form>
                 <FormGroup>
-                  <Label for="exampleEmail">Email</Label>
+                  <Label for="Email">Email</Label>
                   <Input
                     type="email"
                     name="email"
-                    id="exampleEmail"
+                    id="Email"
                     placeholder="with a placeholder"
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="examplePassword">Password</Label>
+                  <Label for="Password">Password</Label>
                   <Input
                     type="password"
                     name="password"
-                    id="examplePassword"
+                    id="Password"
                     placeholder="password placeholder"
                   />
                 </FormGroup>
 
                 <Button>Login</Button>
               </Form>
-              <p>Or create an account</p>
             </Col>
             <Col md="6">
-              <img src="https://fillmurray.com/g/300/300" />
+              <img src="https://fillmurray.com/g/300/300" alt="Moody" />
             </Col>
           </Row>
         </Container>

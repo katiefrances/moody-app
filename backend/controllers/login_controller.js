@@ -1,8 +1,8 @@
 const UserModel = require("../database/models/user_model");
 
 // for sending password with S&H
-const register = (req, res, next) => {
-  const { email, password, name } = req.body;
+const login = (req, res, next) => {
+  const { email, password } = req.body;
   const user = new UserModel({
     email,
     name
@@ -19,11 +19,6 @@ const register = (req, res, next) => {
   });
 };
 
-const login = (req, res, next) => {
-  return res.json(req.user);
-};
-
 module.exports = {
-  register,
   login
 };

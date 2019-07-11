@@ -1,5 +1,4 @@
-import React from "react";
-import Main from "./Main.css";
+import React, { Component } from "react";
 import axios from "axios";
 
 import {
@@ -13,7 +12,7 @@ import {
   Col
 } from "reactstrap";
 
-export default class Login extends React.Component {
+export default class Login extends Component {
   state = {
     name: "",
     email: "",
@@ -43,44 +42,47 @@ export default class Login extends React.Component {
     return (
       <>
         <Container className="LoginForm">
-          <h3>Welcome! Please log in</h3>
+          <h3>Welcome!</h3>
+          <h5>Sorry! You'll need to create an account to use this feature!</h5>
           <Row>
             <Col md="6">
               <Form onSubmit={this.onFormSubmit}>
                 <FormGroup>
-                  <Label for="exampleName">Name</Label>
+                  <Label for="Name">Name</Label>
                   <Input
                     type="name"
                     name="name"
-                    id="exampleName"
+                    id="Name"
                     placeholder="Name"
                     onChange={event => this.onInputChange("name", event)}
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="exampleEmail">Email</Label>
+                  <Label for="Email">Email</Label>
                   <Input
                     type="email"
                     name="email"
-                    id="exampleEmail"
+                    id="Email"
                     placeholder="Email"
                     onChange={event => this.onInputChange("email", event)}
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="examplePassword">Password</Label>
+                  <Label for="Password">Password</Label>
                   <Input
                     type="password"
                     name="password"
-                    id="examplePassword"
+                    id="Password"
                     placeholder="Password"
                     onChange={event => this.onInputChange("password", event)}
                   />
                 </FormGroup>
 
-                <Button type="submit">Login</Button>
+                <Button type="submit">Register</Button>
               </Form>
-              <p>Or create an account</p>
+              <p className="LoginLink">
+                Or <a href="/">Login</a>
+              </p>
             </Col>
             <Col md="6">
               <img src="https://fillmurray.com/g/300/300" />
