@@ -12,6 +12,8 @@ export default class Homepage extends Component {
             <p> Calendar</p>
           </Col>
           <Col sm="6">
+            <canvas id="myChart" width="400" height="400" />
+
             <p>Stats here</p>
           </Col>
         </Row>
