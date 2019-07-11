@@ -2,8 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
 const port = 3000;
+app.use(cors());
 
 mongoose
   .connect("mongodb://localhost/moody", { useNewUrlParser: true })

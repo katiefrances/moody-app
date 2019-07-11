@@ -6,14 +6,13 @@ export default class Homepage extends Component {
   render() {
     return (
       <Container>
+        {/* Stats on right, cal */}
         <Row>
           <Col sm="6">
-            <p> lorem Quam sint saepe nam ut quam.</p>
+            <p> Calendar</p>
           </Col>
           <Col sm="6">
-            <p>
-              <img src="https://fillmurray.com/g/300/300" />
-            </p>
+            <p>Stats here</p>
           </Col>
         </Row>
       </Container>

@@ -1,4 +1,6 @@
 import React from "react";
+import Main from "./Main.css";
+
 import {
   Button,
   Form,
@@ -14,10 +16,10 @@ export default class Login extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container className="LoginForm">
+          <h3>Welcome! Please log in</h3>
           <Row>
-            <Col>
-              {" "}
+            <Col md="6">
               <Form>
                 <FormGroup>
                   <Label for="exampleEmail">Email</Label>
@@ -38,8 +40,12 @@ export default class Login extends React.Component {
                   />
                 </FormGroup>
 
-                <Button>Submit</Button>
+                <Button>Login</Button>
               </Form>
+              <p>Or create an account</p>
+            </Col>
+            <Col md="6">
+              <img src="https://fillmurray.com/g/300/300" />
             </Col>
           </Row>
         </Container>
