@@ -3,6 +3,7 @@ import Homepage from "./Homepage";
 import Nav from "./Nav";
 import Register from "./Register";
 import Main from "./Main.css";
+import HomepageDate from "./HomepageDate";
 
 export default class App extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class App extends Component {
         <Nav />
         {/* <Homepage /> */}
         <Register />
+        <HomepageDate />
       </>
     );
   }

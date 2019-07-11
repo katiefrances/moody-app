@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Container, Row, Col } from "reactstrap";
+import HomepageDate from "./HomepageDate";
 
 export default class Homepage extends Component {
   render() {
@@ -8,7 +9,9 @@ export default class Homepage extends Component {
       <Container>
         {/* Stats on right, cal */}
         <Row>
-          <Col sm="6" />
+          <Col sm="6">
+            <HomepageDate />
+          </Col>
           <Col sm="6">
             <canvas id="myChart" width="400" height="400" />
 
