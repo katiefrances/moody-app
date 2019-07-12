@@ -7,6 +7,12 @@ const app = express();
 const port = 3000;
 app.use(cors());
 
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 mongoose
   .connect("mongodb://localhost/moody", { useNewUrlParser: true })
   .then(() => console.log("Now connected to mongoDB!"))

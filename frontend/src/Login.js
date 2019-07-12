@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import axios from "axios";
 
 import {
@@ -26,7 +27,7 @@ export default class Login extends Component {
         email,
         password
       })
-      .them(console.log("succesfully logged in"));
+      .then(console.log("succesfully logged in"));
   };
 
   // do I keep it as name or change it to email?
@@ -45,14 +46,15 @@ export default class Login extends Component {
           <h3>Welcome! Please log in</h3>
           <Row>
             <Col md="6">
-              <Form>
+              <Form onSubmit={this.onFormSubmit}>
                 <FormGroup>
                   <Label for="Email">Email</Label>
                   <Input
                     type="email"
                     name="email"
-                    id="Email"
+                    id="email"
                     placeholder="with a placeholder"
+                    onChange={event => this.onInputChange("email", event)}
                   />
                 </FormGroup>
                 <FormGroup>
@@ -60,8 +62,9 @@ export default class Login extends Component {
                   <Input
                     type="password"
                     name="password"
-                    id="Password"
+                    id="password"
                     placeholder="password placeholder"
+                    onChange={event => this.onInputChange("password", event)}
                   />
                 </FormGroup>
 
