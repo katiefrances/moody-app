@@ -1,13 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const MedsSchema = {
+const MedsSchema = new Schema({
   // should have already have dosage and meds information
-  meds: {
-    // checkboxes
-    type: Boolean,
-    required: true
-  },
 
   medsMorning: {
     type: Boolean,
@@ -23,6 +18,6 @@ const MedsSchema = {
     type: Boolean,
     required: true
   }
-};
+});
 
 module.exports = MedsSchema;
