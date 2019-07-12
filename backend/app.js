@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
+const passport = require("passport");
 const cors = require("cors");
 const app = express();
 const port = 3000;
