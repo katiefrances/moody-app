@@ -20,12 +20,10 @@ export default class Login extends Component {
   onFormSubmit = event => {
     event.preventDefault();
     const { email, password } = this.state;
-    axios
-      .post("http://localhost:3000/auth/login", {
-        email,
-        password
-      })
-      .then(console.log("succesfully logged in"));
+    axios.post("http://localhost:3000/auth/login", {
+      email,
+      password
+    });
   };
 
   onInputChange = (email, event) => {
@@ -49,7 +47,7 @@ export default class Login extends Component {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="with a placeholder"
+                    placeholder="Email"
                     onChange={event => this.onInputChange("email", event)}
                   />
                 </FormGroup>
@@ -59,7 +57,7 @@ export default class Login extends Component {
                     type="password"
                     name="password"
                     id="password"
-                    placeholder="password placeholder"
+                    placeholder="Password"
                     onChange={event => this.onInputChange("password", event)}
                   />
                 </FormGroup>

@@ -12,6 +12,7 @@ import {
   Col
 } from "reactstrap";
 
+// WORKS YAY
 export default class Register extends Component {
   state = {
     name: "",
@@ -23,13 +24,11 @@ export default class Register extends Component {
     event.preventDefault();
     console.log("here");
     const { name, email, password } = this.state;
-    axios
-      .post("http://localhost:3000/auth/register", {
-        name,
-        email,
-        password
-      })
-      .then(console.log("great success"));
+    axios.post("http://localhost:3000/auth/register", {
+      name,
+      email,
+      password
+    });
   };
 
   onInputChange = (name, event) => {
