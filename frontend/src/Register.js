@@ -12,7 +12,7 @@ import {
   Col
 } from "reactstrap";
 
-export default class Login extends Component {
+export default class Register extends Component {
   state = {
     name: "",
     email: "",
@@ -21,6 +21,7 @@ export default class Login extends Component {
 
   onFormSubmit = event => {
     event.preventDefault();
+    console.log("here");
     const { name, email, password } = this.state;
     axios
       .post("http://localhost:3000/auth/register", {
@@ -85,7 +86,7 @@ export default class Login extends Component {
               </p>
             </Col>
             <Col md="6">
-              <img src="https://fillmurray.com/g/300/300" />
+              <img src="https://via.placeholder.com/200" alt="Moody" />
             </Col>
           </Row>
         </Container>

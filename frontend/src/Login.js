@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import axios from "axios";
-
 import {
   Button,
   Form,
@@ -30,8 +28,6 @@ export default class Login extends Component {
       .then(console.log("succesfully logged in"));
   };
 
-  // do I keep it as name or change it to email?
-  // *thinking emoji
   onInputChange = (email, event) => {
     console.log(this.state);
     this.setState({
@@ -72,7 +68,7 @@ export default class Login extends Component {
               </Form>
             </Col>
             <Col md="6">
-              <img src="https://fillmurray.com/g/300/300" alt="Moody" />
+              <img src="https://via.placeholder.com/200" alt="Moody" />
             </Col>
           </Row>
         </Container>

@@ -2,7 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
-const passport = require("passport");
+const passport = require("./config/passport");
+const passportLocal = require("passport-local");
 const cors = require("cors");
 const app = express();
 const port = 3000;
@@ -10,9 +11,9 @@ app.use(cors());
 
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+// passport.use(new LocalStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 mongoose
   .connect("mongodb://localhost/moody", { useNewUrlParser: true })

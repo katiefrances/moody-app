@@ -1,6 +1,8 @@
 //// Use passport to validate user via the createStrategy() function ////
 
 const passport = require("passport");
+// const LocalStrategy = require("passport-local").Strategy;
+
 const UserModel = require("./../database/models/user_model");
 
 passport.serializeUser(UserModel.serializeUser());
